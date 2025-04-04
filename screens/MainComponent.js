@@ -94,12 +94,11 @@ const ContactNavigator = () => {
 
 const ReservationNavigator = () => {
     const Stack = createStackNavigator();
-
     return (
         <Stack.Navigator screenOptions={screenOptions}>
             <Stack.Screen
                 name="Reservation"
-                component={reservationScreen}
+                component={ReservationScreen}
                 options={({ navigation }) => ({ 
                     title: "Reservation Search",
                     headerLeft: () => (
