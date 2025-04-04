@@ -11,6 +11,7 @@ export const fetchPromotions = createAsyncThunk(
             );
         }
         const data = await response.json();
+        return data;
     }
 );
 
@@ -30,7 +31,9 @@ const promotionsSlice = createSlice({
             })
             .addCase(fetchPromotions.rejected, (state, action) => {
                 state.isLoading = false;
-                state.errMess = action.error ? action.error.message : 'Fetch failed';
+                state.errMess = action.error
+                    ? action.error.message
+                    : 'Fetch failed';
             });
     }
 });
