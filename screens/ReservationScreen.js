@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Text, View, ScrollView, StyleSheet,  Switch, Button, Modal } from 'react-native';
+import { Text, View, ScrollView, StyleSheet,  Switch, Button, Modal, Platform } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
@@ -99,7 +99,7 @@ const ReservationScreen = () => {
                         Hike-In?: {hikeIn ? 'Yes' : 'No'}
                     </Text>
                     <Text style={styles.modalText}>
-                        Date: {date.toLocaleTimeString('en-US')}
+                        Date: {date.toLocaleDateString('en-US')}
                     </Text>
                     <Button
                         onPress={() => {
