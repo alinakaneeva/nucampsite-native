@@ -81,26 +81,7 @@ const CampsiteInfoScreen = ({ route }) => {
                 onRequestClose={() => setShowModal(!showModal)}
                 >
                 <View style={styles.modal}>
-                    <View style={{margin: 10}}>
-                        <Button
-                            title='Submit'
-                            color='#5637DD'
-                            onPress={() => {
-                                handleSubmit();
-                                resetForm();
-                            }}
-                        />
-                    </View>
-                    <View style={{margin: 10}}>
-                        <Button
-                            onPress={() => {
-                                setShowModal(!showModal);
-                                resetForm();
-                            }}
-                            color='#808080'
-                            title='Cancel'
-                        />
-                    </View>
+                    
                     <Rating
                         showRating
                         startingValue={rating}
@@ -133,6 +114,27 @@ const CampsiteInfoScreen = ({ route }) => {
                         onChangeText={(text) => setText(text)}
                         value={text}
                     />
+
+                    <View style={{margin: 10}}>
+                        <Button
+                            title='Submit'
+                            color='#5637DD'
+                            onPress={() => {
+                                handleSubmit();
+                                resetForm();
+                            }}
+                        />
+                    </View>
+                    <View style={{margin: 10}}>
+                        <Button
+                            onPress={() => {
+                                setShowModal(!showModal);
+                                resetForm();
+                            }}
+                            color='#808080'
+                            title='Cancel'
+                        />
+                    </View>
                 </View>
             </Modal>
         </>
