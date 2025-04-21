@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Text, View, ScrollView, StyleSheet,  Switch, Button, Platform, Alert, PanResponder } from 'react-native';
+import { Text, View, ScrollView, StyleSheet,  Switch, Button, Platform, Alert } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import * as Animatable from 'react-native-animatable';
